@@ -1,0 +1,46 @@
+#container {
+    width: 300px;
+    height: 360px;
+    display: block;
+    margin: auto;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+input[type=button], span, h2 {
+    margin-left: 30px;
+}
+
+.tabela {
+    margin: auto;
+}
+
+th {
+    background-color: beige;
+    width: 200px;
+    border: 1px solid black;
+}
+
+td {
+    width: 200px;
+    border: 1px solid black;
+    text-align: center;
+}
+#silver{
+    background-color: silver;
+}
+#red{
+    background-color: red;
+}
+#black{
+    background-color: black;
+}
+#white{
+    background-color: white;
+}
+#yellow{
+    background-color: yellow;
+}
+#blue{
+    background-color: blue;
+}
