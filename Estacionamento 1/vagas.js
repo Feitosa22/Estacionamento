@@ -1,5 +1,8 @@
 let dados = [];
-// usar uma api para salvar os dados nos cookies como se fosse uma banco de dados offline
+let horas = [];
+// melhorar o código para contabilizar dias estacionados...
+let diaDeEntrada = [];
+// usar uma api para salvar os dados nos cookies podendo assim fechar o app e continuar no dia seguinte
 function InCar() {
   document.querySelector("#corpoTabela").innerText = "";
   let Modelo = document.querySelector("#Modelo").value;
@@ -7,6 +10,7 @@ function InCar() {
   let Placa = document.querySelector("#Placa").value;
   let Entrada = document.querySelector("#Entrada").value;
   let Saida = document.querySelector("#Saida").value;
+  let ContaEntrada = document.querySelector("#Entrada").valueAsNumber;  
 
   let objeto = {
     Modelo: `${Modelo}`,
@@ -16,10 +20,9 @@ function InCar() {
     Saida: `${Saida}`,
   };
   dados.push(objeto);
+  horas.push(ContaEntrada);
   console.log(dados);
-  let teste = parseFloat(Entrada).toFixed[2];
-  console.log(teste)
-  console.log(typeof teste)
+  console.log(horas)
   
   document.querySelector("#Modelo").value = "";
   document.querySelector("#Placa").value = "";
@@ -60,16 +63,20 @@ function historico() {
 function OutCar() {
   let Placa = document.querySelector("#Placa").value;
   let Saida = document.querySelector("#Saida").value;
+  let ContaSaida = document.querySelector("#Saida").valueAsNumber;
+  console.log(ContaSaida)
+  console.log(parseInt(ContaSaida))
   for (let i = 0; i < dados.length; i++) {
-    let entrou = dados[i].Entrada;
     if (Placa == dados[i].Placa) {
-      // melhorar o código para contabilizar dias estacionados...
+
       // adicionar campo, valor pago na tela paga contabilizar no final o valor total bruto recebido.
       // adicionar botão com o horário atual para disponibilizar ao usuário
-      let tEstacionado = parseInt(Saida) - parseInt(entrou);
-      let valorApagar = (tEstacionado -1) * 2 + 5;
+      let tEstacionado = (ContaSaida-horas[i])/3600000;
+      console.log(tEstacionado)
+      let valorApagar = tEstacionado * 2 + 5;
+      console.log(typeof valorApagar)
 
-      alert(`Total á pagar R$ ${valorApagar} reais.`);
+      alert(`Total á pagar R$ ${valorApagar.toFixed(2)} reais.`);
       dados[i].Saida = Saida;
       document.querySelector("#corpoTabela").innerHTML = `    
             <tr>
