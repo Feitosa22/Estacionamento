@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="vagas.css" />
-    <script src="./vagas.js"></script>
     <title>Estacionamento</title>
   </head>
 
@@ -14,10 +13,10 @@
       <h2>Estacionamento</h2>
 
       <span>Modelo:</span>
-      <input type="text"  id="Modelo" />
+      <input type="text" id="Modelo" class="cleanField" autocomplete="off" autofocus/>
       <br /><br />
       <span>Placa:</span>
-      <input type="text"  id="Placa" />
+      <input type="text" id="Placa" class="cleanField" autocomplete="off"/>
       <br /><br />
       <span>Cor:</span>
       <select id="Cor" class="form-control">
@@ -31,29 +30,34 @@
       </select>
       <br /><br />
       <span>Entrada:</span>
-      <input type="time"  id="Entrada" />
+      <input type="time" id="Entrada" class="cleanField" />
+      <button id="horaAtual">Horário atual</button>
       <br /><br />
       <span>Saída:</span>
-      <input type="time"  id="Saida" />
-
+      <input type="time" id="Saida" class="cleanField" />
+      <button id="horaAtual2">Horário atual</button>
       <br /><br />
-      <input type="button" value="Estacionar Carro" id="InCar" onclick="InCar()"/>
-      <input type="button" value="Saída de Carro" id="OutCar" onclick="OutCar()"/>
-      <br /><br /> <input type="button" value="Mostrar Carros Estacionados" id="parking" onclick="historico()" />
+      <input type="button" value="Estacionar Carro" id="checkIn" />
+      <br />
+      <input type="button" value="Saída de Carro" id="checkOut" />
+      <br />
+      <input type="button" value="Mostrar Carros Estacionados" id="parking" />
     </div>
     <br /><br /><br />
 
     <table class="tabela">
-        <thead>
-            <tr>
-              <th>MODELO</th>
-              <th>PLACA</th>
-              <th>COR</th>
-              <th>ENTRADA</th>
-              <th>SAÍDA</th>
-            </tr>
-          </thead>      
+      <thead>
+        <tr>
+          <th class="model">Modelo</th>
+          <th>Placa</th>
+          <th class="color">Cor</th>
+          <th>Entrada</th>
+          <th>Saída</th>
+          <th class="editar">Ações</th>
+        </tr>
+      </thead>
       <tbody id="corpoTabela"></tbody>
     </table>
   </body>
+  <script src="./vagas.js"></script>
 </html>
