@@ -81,8 +81,17 @@ const mostrarDadosNaTabelaProUsuario = (dados, index) => {
       `;
 };
 
-const alertCustomizado = (msg) => {
-  alert("Teste da função", msg);
+const alertCustomizado = (msg, cor) => {
+  console.log(typeof cor);
+  let MostrarnaTela = document.querySelector("#container");
+  let divCriada = document.createElement("div");
+  divCriada.classList.add("alertaCustomizado");
+  divCriada.innerText = msg;
+  MostrarnaTela.appendChild(divCriada);
+  divCriada.style.backgroundColor = cor;
+  setTimeout(() => {
+    MostrarnaTela.removeChild(divCriada);
+  }, 4000);
 };
 
 function verificarDuplicidade(Placa) {
@@ -92,6 +101,7 @@ function verificarDuplicidade(Placa) {
     if (carro.Placa === Placa) {
       carroJaNaGaragem = carro;
       boolean = true;
+      return;
     }
   });
   if (boolean) {
@@ -112,10 +122,10 @@ const criarRegistroEntradaVeiculo = () => {
     pegarDadosDoLocalStorage();
     let carroJaEstacionado = verificarDuplicidade(Placa);
     if (!Modelo || !Placa || !horarioEntrada) {
-      alert("Preencha os campos Modelo, Placa e Entrada!");
+      alertCustomizado("Preencha os campos Modelo, Placa e Entrada!", "red");
       return;
     } else if (carroJaEstacionado) {
-      alert("Veiculo já estacionado!");
+      alertCustomizado("Veiculo já estacionado!", "yellow");
       return;
     }
 
@@ -134,8 +144,9 @@ const criarRegistroEntradaVeiculo = () => {
 
     limparTabelaEInputs();
     mostrarDadosNaTabelaProUsuario(dataObject, 0);
+    alertCustomizado(`Veículo ${Modelo}\nPlaca ${Placa} estacionado!`, "blue");
   } catch (error) {
-    alert("Erro Interno");
+    alertCustomizado(error, "purple");
   }
 };
 
@@ -174,13 +185,9 @@ const saidaDeCarro = () => {
       elemento.Saida = hora;
       placaEncontrada = true;
       const tempoEstacionado = calcularTempoEstacionado(elemento.Id, Saida);
-      const valorPagar = calcularValorPagar(tempoEstacionado);
-      alert(
-        `Tempo estacionado: ${tempoEstacionado} horas \n valorPagar: ${valorPagar} Reais`
-      );
-      // //     localStorage.setItem("dados", JSON.stringify(dados));
+      const valorPagar = calcularValorPagar(tempoEstacionado);      
+      alertCustomizado(`Valor a pagar: ${valorPagar} Reais`, "green");
       localStorage.dados = JSON.stringify(dadosDoLocalStorage);
-
       limparTabelaEInputs();
       mostrarDadosNaTabelaProUsuario(elemento, 0);
       return;
