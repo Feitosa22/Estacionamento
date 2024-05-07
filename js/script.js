@@ -142,13 +142,13 @@ function mostrarCarrosEstacionados() {
   let corpoTabela = pegarElementoPeloSeletorCss("#corpoTabela");
   corpoTabela.innerHTML = "";
   
-  // fetch("json/dadosAmostra.json").then(function (dadosDoFetch) {
-  //   dadosDoFetch.json().then(function (dadosDoFetch) {
-  //     dadosDoFetch.forEach(function (elemento, index) {
-  //       mostrarDadosNaTabelaProUsuario(elemento, index);
-  //     });
-  //   });
-  // });
+  fetch("json/dadosAmostra.json").then(function (dadosDoFetch) {
+    dadosDoFetch.json().then(function (dadosDoFetch) {
+      dadosDoFetch.forEach(function (elemento, index) {
+        mostrarDadosNaTabelaProUsuario(elemento, index);
+      });
+    });
+  });
 }
 
 pegarElementoPeloSeletorCss("#corpoTabela").addEventListener(
