@@ -77,6 +77,19 @@ const alertCustomizado = (msg) => {
   alert("Teste da função", msg);
 };
 
+function verificarDuplicidade(Placa) {
+  let boolean = false;
+  let carroJaNaGaragem
+  dadosDoLocalStorage.forEach((carro) => {
+    if (carro.Placa === Placa) {
+      carroJaNaGaragem = carro;
+      boolean = true;
+    }
+  });
+  mostrarDadosNaTabelaProUsuario(carroJaNaGaragem, 0)
+  return boolean;
+}
+
 const criarRegistroEntradaVeiculo = () => {
   try {
     let Modelo = pegarElementoPeloSeletorCss("#Modelo").value;
@@ -86,8 +99,13 @@ const criarRegistroEntradaVeiculo = () => {
     let horarioSaida = pegarElementoPeloSeletorCss("#horarioSaida").value;
     let corpoTabela = pegarElementoPeloSeletorCss("#corpoTabela");
 
+    pegarDadosDoLocalStorage();
+    let carroJaEstacionado = verificarDuplicidade(Placa);
     if (!Modelo || !Placa || !horarioEntrada) {
       alert("Preencha os campos Modelo, Placa e Entrada!");
+      return;
+    } else if (carroJaEstacionado) {
+      alert("Veiculo já estacionado!");
       return;
     }
 
@@ -101,7 +119,6 @@ const criarRegistroEntradaVeiculo = () => {
       Register: new Date().toLocaleString(),
     };
 
-    pegarDadosDoLocalStorage();
     dadosDoLocalStorage.push(dataObject);
     localStorage.dados = JSON.stringify(dadosDoLocalStorage);
 
