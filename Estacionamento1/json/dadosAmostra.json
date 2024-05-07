@@ -1,0 +1,119 @@
+[
+    {
+        "Id" : "0",
+        "Modelo": "Accord (Honda)",
+        "Placa": "AAA-0A00",
+        "Cor": "silver",
+        "Entrada": "11:11",
+        "Saida": "",
+        "Register": "03/05/2024, 11:11:50"
+    },
+    {
+        "Id" : "1",
+        "Modelo": "Alphard (Toyota)",
+        "Placa": "BBB-1B11",
+        "Cor": "blue",
+        "Entrada": "11:12",
+        "Saida": "",
+        "Register": "03/05/2024, 11:12:24"
+    },
+    {
+        "Id" : "2",
+        "Modelo": "Amarok (Volkswagen)",
+        "Placa": "CCC-2C22",
+        "Cor": "black",
+        "Entrada": "11:13",
+        "Saida": "",
+        "Register": "03/05/2024, 11:13:31"
+    },
+    {
+        "Id" : "3",
+        "Modelo": "Argo (Fiat)",
+        "Placa": "DDD-3D33",
+        "Cor": "red",
+        "Entrada": "11:14",
+        "Saida": "",
+        "Register": "03/05/2024, 11:14:32"
+    },
+    {
+        "Id" : "4",
+        "Modelo": "Artura (McLaren)",
+        "Placa": "EEE-4E44",
+        "Cor": "yellow",
+        "Entrada": "12:15",
+        "Saida": "",
+        "Register": "03/05/2024, 11:15:55"
+    },
+    {
+        "Id" : "5",
+        "Modelo": "Astra (Chevrolet)",
+        "Placa": "FFF-5F55",
+        "Cor": "black",
+        "Entrada": "12:16",
+        "Saida": "",
+        "Register": "03/05/2024, 11:16:57"
+    },
+    {
+        "Id" : "6",
+        "Modelo": "A3 (Audi)",
+        "Placa": "GGG-5G55",
+        "Cor": "black",
+        "Entrada": "13:17",
+        "Saida": "",
+        "Register": "03/05/2024, 11:17:00"
+    },
+    {
+        "Id" : "7",
+        "Modelo": "Civic (Honda)",
+        "Placa": "HHH-6H66",
+        "Cor": "white",
+        "Entrada": "13:18",
+        "Saida": "",
+        "Register": "03/05/2024, 11:18:03"
+    },
+    {
+        "Id" : "8",
+        "Modelo": "Brasília (Volkswagen)",
+        "Placa": "ZVP-2917",
+        "Cor": "yellow",
+        "Entrada": "14:19",
+        "Saida": "",
+        "Register": "03/05/2024, 11:19:05"
+    },
+    {
+        "Id" : "9",
+        "Modelo": "Fiesta (Ford)",
+        "Placa": "VHF-7671",
+        "Cor": "red",
+        "Entrada": "14:20",
+        "Saida": "",
+        "Register": "03/05/2024, 11:20:13"
+    },
+    {
+        "Id" : "10",
+        "Modelo": "i30 (Hyundai)",
+        "Placa": "III-8I88",
+        "Cor": "black",
+        "Entrada": "14:51",
+        "Saida": "",
+        "Register": "03/05/2024, 11:21:23"
+    },
+    {
+        "Id" : "11",
+        "Modelo": "Bora (Volkswagen)",
+        "Placa": "JJJ-9J99",
+        "Cor": "blue",
+        "Entrada": "15:22",
+        "Saida": "",
+        "Register": "03/05/2024, 14:22:33"
+    },
+    {
+        "Id" : "12",
+        "Modelo": "HB20 (Hyundai)",
+        "Placa": "RTJ-3E43",
+        "Cor": "white",
+        "Entrada": "16:16",
+        "Saida": "",
+        "Register": "03/05/2024, 15:16:25"
+    }
+]

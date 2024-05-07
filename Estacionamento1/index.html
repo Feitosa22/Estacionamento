@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="/Estacionamento1/img/placa.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="css/vagas.css" />
+    <link rel="stylesheet" href="css/alert.css" />
+    <link rel="stylesheet" href="css/alert.css" />
+    <title>Estacionamento</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <h2>Estacionamento</h2>
+
+      <form action="">
+        <div>
+          <label for="Modelo">Modelo:</label>
+          <input
+            list="carros"
+            type="text"
+            id="Modelo"
+            class="cleanField"
+            autocomplete="off"
+            autofocus
+          />
+          <datalist id="carros"><option>...</option></datalist>
+        </div>
+        <div>
+          <label for="Placa">Placa:</label>
+          <input
+            type="text"
+            id="Placa"
+            class="cleanField"
+            autocomplete="off"
+            maxlength="7"
+          />
+        </div>
+        <div>
+          <span>Cor:</span>
+          <select id="Cor" class="form-control">
+            <option value="" selected>...</option>
+            <option value="silver" selected>Prata</option>
+            <option value="blue">Azul</option>
+            <option value="red">Vermelho</option>
+            <option value="black">Preto</option>
+            <option value="white">Branco</option>
+            <option value="yellow">Amarelo</option>
+          </select>
+          <!-- <input type="color" list="presetColors" />
+          <datalist id="presetColors">
+            <option value="#ff0000"></option>
+            <option value="#00ff00"></option>
+            <option value="#0000ff"></option>
+            <option value="#000000"></option>
+          </datalist> -->
+        </div>
+
+        <div>
+          <label for="horarioEntrada">Entrada:</label>
+          <input type="time" id="horarioEntrada" class="cleanField" />
+          <button
+            type="button"
+            id="btnHoraEntrada"
+            onclick="PegarHorarioAtual('#horarioEntrada')"
+            event.preventDefault()
+          >
+            Horário atual
+          </button>
+        </div>
+        <div>
+          <label for="horarioSaida">Saida:</label>
+          <input type="time" id="horarioSaida" class="cleanField" />
+          <button
+            type="button"
+            id="btnHorarioSaida"
+            onclick="PegarHorarioAtual('#horarioSaida')"
+            event.preventDefault()
+          >
+            Horário atual
+          </button>
+        </div>
+        <div>
+          <input
+            type="button"
+            value="Estacionar Carro"
+            id="checkIn"
+            onclick="criarRegistroEntradaVeiculo()"
+            event.preventDefault()
+          />
+          <input
+            type="button"
+            value="Saída de Carro"
+            id="checkOut"
+            onclick="saidaDeCarro()"
+            event.preventDefault()
+          />
+        </div>
+        <input
+          type="button"
+          value="Mostrar Carros Estacionados"
+          onclick="mostrarCarrosEstacionados()"
+          id="parking"
+          event.preventDefault()
+        />
+        <h3><div class="dataDeHoje"></div></h3>
+      </form>
+    </div>
+
+    <table class="tabela">
+      <thead>
+        <tr>
+          <th class="model">Modelo</th>
+          <th>Placa</th>
+          <th class="color">Cor</th>
+          <th>Entrada</th>
+          <th>Saída</th>
+          <th class="editar">Ações</th>
+        </tr>
+      </thead>
+      <tbody id="corpoTabela"></tbody>
+    </table>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
