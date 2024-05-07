@@ -91,7 +91,7 @@ const alertCustomizado = (msg, cor) => {
   divCriada.style.backgroundColor = cor;
   setTimeout(() => {
     MostrarnaTela.removeChild(divCriada);
-  }, 4000);
+  }, 3500);
 };
 
 function verificarDuplicidade(Placa) {
@@ -174,7 +174,7 @@ const saidaDeCarro = () => {
   pegarDadosDoLocalStorage();
 
   if (!Placa || !Saida) {
-    alert("Digite a placa e saida!");
+    alertCustomizado("Placa e Horário de Saida Obrigatório!", "red");
     return;
   }
 
@@ -194,7 +194,7 @@ const saidaDeCarro = () => {
     }
   });
   if (!placaEncontrada) {
-    alert("Placa não Encontrada!@");
+    alertCustomizado("Placa não Encontrada!", "yellow");
   }
 };
 
@@ -221,9 +221,7 @@ pegarElemento("#corpoTabela").addEventListener("click", (event) => {
     console.log(carro);
     const tempoEstacionado = calcularTempoEstacionado(carro.Id, Saida);
     const valorPagar = calcularValorPagar(tempoEstacionado);
-    alert(
-      `Tempo estacionado: ${tempoEstacionado} horas \n valorPagar: ${valorPagar} Reais`
-    );
+    alertCustomizado(`Valor a pagar: ${valorPagar} Reais`, "green");
     localStorage.dados = JSON.stringify(dadosDoLocalStorage);
     mostrarDadosNaTabelaProUsuario(carro, 0);
   }

@@ -21,12 +21,10 @@
 
 @keyframes fazerEleCorrer {
     0% {
-        transform: translateX(1000px);
         opacity: 0;
     }
 
     100% {
-        transform: translateX(0px);
         opacity: 1;
     }
 }
@@ -38,10 +36,9 @@
     left: 2px;
     order: 2;
     bottom: 0;
-    width: 0;
     height: 5px;
     background-color: rgba(0, 0, 0, 5);
-    animation: time 4s forwards;
+    animation: time 3.5s forwards;
 }
 
 @keyframes time {
