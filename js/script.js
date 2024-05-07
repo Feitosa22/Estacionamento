@@ -6,24 +6,31 @@ const pegarDadosDoLocalStorage = () => {
   return dadosDoLocalStorage;
 };
 
-const historicoDeCarrosEstacionados = () => {
+const historico = () => {
   let historicoDoEstacioanmento = localStorage.historico
     ? JSON.parse(localStorage.historico)
     : [];
   return historicoDoEstacioanmento;
 };
 
-function pegarElementoPeloSeletorCss(selector) {
+function pegarElemento(selector) {
   const diretamentoDoHTML = document.querySelector(selector);
   return diretamentoDoHTML;
 }
 
-pegarElementoPeloSeletorCss(".dataDeHoje").innerText =
-  new Date().toLocaleString("pt-BR", {
-    day: "2-digit",
-    month: "2-digit",
-    year: "numeric",
-  });
+const limparTabelaEInputs = () => {
+  let corpoTabela = pegarElemento("#corpoTabela");
+  corpoTabela.innerHTML = "";
+  const limparCamposInput = document
+    .querySelectorAll(".cleanField")
+    .forEach((eachField) => (eachField.value = ""));
+};
+
+pegarElemento(".dataDeHoje").innerText = new Date().toLocaleString("pt-BR", {
+  day: "2-digit",
+  month: "2-digit",
+  year: "numeric",
+});
 
 const listaNomeDeCarros = () => {
   let carros = document.querySelector("#carros");
@@ -53,51 +60,54 @@ const PegarHorarioAtual = (localDeDestinoDoHorarioAtual) => {
     hour: "numeric",
     minute: "numeric",
   });
-  pegarElementoPeloSeletorCss(localDeDestinoDoHorarioAtual).value = horaEMinuto;
+  pegarElemento(localDeDestinoDoHorarioAtual).value = horaEMinuto;
 };
 
 const mostrarDadosNaTabelaProUsuario = (dados, index) => {
-  let corpoTabela = pegarElementoPeloSeletorCss("#corpoTabela");
+  let corpoTabela = pegarElemento("#corpoTabela");
   let tr = document.createElement("tr");
   corpoTabela.appendChild(tr);
   tr.innerHTML = `    
       <tr>
-      <td>${dados.Modelo}</td>
-      <td>${dados.Placa}</td>
-      <td class='color' id='${dados.Cor}'></td>
-      <td data-time='${new Date().toLocaleDateString()}'>${dados.Entrada}</td>
-      <td>${dados.Saida}</td>
-      <td>
-        <button type="button" id="checkout-${index}" data-action='checkout' data-indice="${index}"  class="button red">Baixar</button>
-      </td>
+        <td>${dados.Modelo}</td>
+        <td>${dados.Placa}</td>
+        <td class='color' id='${dados.Cor}'></td>
+        <td data-time='${new Date().toLocaleDateString()}'>${dados.Entrada}</td>
+        <td>${dados.Saida}</td>
+        <td>
+          <button type="button" id="checkout-${index}" data-action='checkout' data-indice="${index}"  class="button red">Baixar</button>
+        </td>
       </tr>
       `;
 };
+
 const alertCustomizado = (msg) => {
   alert("Teste da função", msg);
 };
 
 function verificarDuplicidade(Placa) {
   let boolean = false;
-  let carroJaNaGaragem
+  let carroJaNaGaragem;
   dadosDoLocalStorage.forEach((carro) => {
     if (carro.Placa === Placa) {
       carroJaNaGaragem = carro;
       boolean = true;
     }
   });
-  mostrarDadosNaTabelaProUsuario(carroJaNaGaragem, 0)
+  if (boolean) {
+    limparTabelaEInputs();
+    mostrarDadosNaTabelaProUsuario(carroJaNaGaragem, 0);
+  }
   return boolean;
 }
 
 const criarRegistroEntradaVeiculo = () => {
   try {
-    let Modelo = pegarElementoPeloSeletorCss("#Modelo").value;
-    let Placa = pegarElementoPeloSeletorCss("#Placa").value;
-    let Cor = pegarElementoPeloSeletorCss("#Cor").value;
-    let horarioEntrada = pegarElementoPeloSeletorCss("#horarioEntrada").value;
-    let horarioSaida = pegarElementoPeloSeletorCss("#horarioSaida").value;
-    let corpoTabela = pegarElementoPeloSeletorCss("#corpoTabela");
+    let Modelo = pegarElemento("#Modelo").value;
+    let Placa = pegarElemento("#Placa").value;
+    let Cor = pegarElemento("#Cor").value;
+    let horarioEntrada = pegarElemento("#horarioEntrada").value;
+    let horarioSaida = pegarElemento("#horarioSaida").value;
 
     pegarDadosDoLocalStorage();
     let carroJaEstacionado = verificarDuplicidade(Placa);
@@ -122,12 +132,8 @@ const criarRegistroEntradaVeiculo = () => {
     dadosDoLocalStorage.push(dataObject);
     localStorage.dados = JSON.stringify(dadosDoLocalStorage);
 
-    corpoTabela.innerHTML = "";
+    limparTabelaEInputs();
     mostrarDadosNaTabelaProUsuario(dataObject, 0);
-
-    const limparCamposInput = document
-      .querySelectorAll(".cleanField")
-      .forEach((eachField) => (eachField.value = ""));
   } catch (error) {
     alert("Erro Interno");
   }
@@ -147,13 +153,12 @@ const calcularTempoEstacionado = (entrada, saida) => {
 };
 
 const saidaDeCarro = () => {
-  let Placa = pegarElementoPeloSeletorCss("#Placa").value;
+  let Placa = pegarElemento("#Placa").value;
   let Saida = Date.now();
   let hora = new Date(Saida).toLocaleString("pt-BR", {
     hour: "numeric",
     minute: "numeric",
   });
-  let corpoTabela = pegarElementoPeloSeletorCss("#corpoTabela");
   let placaEncontrada = false;
   pegarDadosDoLocalStorage();
 
@@ -176,7 +181,7 @@ const saidaDeCarro = () => {
       // //     localStorage.setItem("dados", JSON.stringify(dados));
       localStorage.dados = JSON.stringify(dadosDoLocalStorage);
 
-      corpoTabela.innerHTML = "";
+      limparTabelaEInputs();
       mostrarDadosNaTabelaProUsuario(elemento, 0);
       return;
     }
@@ -187,37 +192,32 @@ const saidaDeCarro = () => {
 };
 
 function mostrarCarrosEstacionados() {
-  let corpoTabela = pegarElementoPeloSeletorCss("#corpoTabela");
-  corpoTabela.innerHTML = "";
+  limparTabelaEInputs();
   pegarDadosDoLocalStorage();
   dadosDoLocalStorage.forEach((elemento, index) => {
     mostrarDadosNaTabelaProUsuario(elemento, index);
   });
 }
 
-pegarElementoPeloSeletorCss("#corpoTabela").addEventListener(
-  "click",
-  (event) => {
-    pegarDadosDoLocalStorage();
-    let corpoTabela = pegarElementoPeloSeletorCss("#corpoTabela");
-    let Saida = Date.now();
-    let hora = new Date(Saida).toLocaleString("pt-BR", {
-      hour: "numeric",
-      minute: "numeric",
-    });
-    let index = event.target.dataset.indice;
-    let carro = pegarDadosDoLocalStorage()[index];
-    if (event.target.type == "button") {
-      corpoTabela.innerHTML = "";
-      carro.Saida = hora;
-      console.log(carro);
-      const tempoEstacionado = calcularTempoEstacionado(carro.Id, Saida);
-      const valorPagar = calcularValorPagar(tempoEstacionado);
-      alert(
-        `Tempo estacionado: ${tempoEstacionado} horas \n valorPagar: ${valorPagar} Reais`
-      );
-      localStorage.dados = JSON.stringify(dadosDoLocalStorage);
-      mostrarDadosNaTabelaProUsuario(carro, 0);
-    }
+pegarElemento("#corpoTabela").addEventListener("click", (event) => {
+  pegarDadosDoLocalStorage();
+  let Saida = Date.now();
+  let hora = new Date(Saida).toLocaleString("pt-BR", {
+    hour: "numeric",
+    minute: "numeric",
+  });
+  let index = event.target.dataset.indice;
+  let carro = pegarDadosDoLocalStorage()[index];
+  if (event.target.type == "button") {
+    limparTabelaEInputs();
+    carro.Saida = hora;
+    console.log(carro);
+    const tempoEstacionado = calcularTempoEstacionado(carro.Id, Saida);
+    const valorPagar = calcularValorPagar(tempoEstacionado);
+    alert(
+      `Tempo estacionado: ${tempoEstacionado} horas \n valorPagar: ${valorPagar} Reais`
+    );
+    localStorage.dados = JSON.stringify(dadosDoLocalStorage);
+    mostrarDadosNaTabelaProUsuario(carro, 0);
   }
-);
+});
