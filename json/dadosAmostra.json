@@ -1,190 +1,792 @@
 {
     "marcaModelo": [
         {
-            "Modelo": "Accord (Honda)"
+            "modelo": "Amarok",
+            "marca": "Volkswagen"
         },
         {
-            "Modelo": "Alphard (Toyota)"
+            "modelo": "Accord",
+            "marca": "Honda"
         },
         {
-            "Modelo": "Amarok (Volkswagen)"
+            "modelo": "Argo",
+            "marca": "Fiat"
         },
         {
-            "Modelo": "Argo (Fiat)"
+            "modelo": "Astra",
+            "marca": "Chevrolet"
         },
         {
-            "Modelo": "Artura (McLaren)"
+            "modelo": "Alphard",
+            "marca": "Toyota"
         },
         {
-            "Modelo": "Astra (Chevrolet)"
+            "modelo": "A3",
+            "marca": "Audi"
         },
         {
-            "Modelo": "A3 (Audi)"
+            "modelo": "Artura",
+            "marca": "McLaren"
         },
         {
-            "Modelo": "Bronco (Ford)"
+            "modelo": "Belina",
+            "marca": "Ford"
         },
         {
-            "Modelo": "Brasília (Volkswagen)"
+            "modelo": "Besta",
+            "marca": "Kia"
         },
         {
-            "Modelo": "Bora (Volkswagen)"
+            "modelo": "Blazer",
+            "marca": "Chevrolet"
         },
         {
-            "Modelo": " Blazer (Chevrolet)"
+            "modelo": "Bolt",
+            "marca": "Chevrolet"
         },
         {
-            "Modelo": "Besta (Kia)"
+            "modelo": "Bora",
+            "marca": "Volkswagen"
         },
         {
-            "Modelo": "Bolt (Chevrolet)"
+            "modelo": "Brasília",
+            "marca": "Volkswagen"
         },
         {
-            "Modelo": "Belina (Ford)"
+            "modelo": "Bronco",
+            "marca": "Ford"
         },
         {
-            "Modelo": "Corolla (Toyota)"
+            "modelo": "Captur",
+            "marca": "Renault"
         },
         {
-            "Modelo": "Camry (Toyota)"
+            "modelo": "Civic",
+            "marca": "Honda"
         },
         {
-            "Modelo": "Clio (Renault)"
+            "modelo": "Commodore",
+            "marca": "Chevrolet"
         },
         {
-            "Modelo": "Corvette (Chevrolet)"
+            "modelo": "Compass",
+            "marca": "Jeep"
         },
         {
-            "Modelo": "Civic (Honda)"
+            "modelo": "Corolla",
+            "marca": "Toyota"
         },
         {
-            "Modelo": "Captiva (Chevrolet)"
+            "modelo": "Creta",
+            "marca": "Hyundai"
         },
         {
-            "Modelo": "Celta (Chevrolet)"
+            "modelo": "Cronos",
+            "marca": "Fiat"
         },
         {
-            "Modelo": "Duster (Renault)"
+            "modelo": "Cruze",
+            "marca": "Chevrolet"
         },
         {
-            "Modelo": "Del Rey (Ford)"
+            "modelo": "C4 Cactus",
+            "marca": "Citroën"
         },
         {
-            "Modelo": "Defender (Land Rover)"
+            "modelo": "Duster",
+            "marca": "Renault"
         },
         {
-            "Modelo": "Doblò (Fiat)"
+            "modelo": "Dardo",
+            "marca": "Fiat"
         },
         {
-            "Modelo": "Ducato (Fiat)"
+            "modelo": "Defender",
+            "marca": "Land Rover"
         },
         {
-            "Modelo": "Dardo (Fiat)"
+            "modelo": "Del Rey",
+            "marca": "Ford"
         },
         {
-            "Modelo": "Dolphin (BYD)"
+            "modelo": "Doblò",
+            "marca": "Fiat"
         },
         {
-            "Modelo": "Elantra (Hyundai)"
+            "modelo": "Dolphin",
+            "marca": "BYD"
         },
         {
-            "Modelo": "Escort (Ford)"
+            "modelo": "Ducato",
+            "marca": "Fiat"
         },
         {
-            "Modelo": "Evoque (Land Rover)"
+            "modelo": "EcoSport",
+            "marca": "Ford"
         },
         {
-            "Modelo": "Etios (Toyota)"
+            "modelo": "Equinox",
+            "marca": "Chevrolet"
         },
         {
-            "Modelo": "Eclipse (Mitsubishi)"
+            "modelo": "Eclipse",
+            "marca": "Mitsubishi"
         },
         {
-            "Modelo": "Edge (Ford)"
+            "modelo": "Edge",
+            "marca": "Ford"
         },
         {
-            "Modelo": "Elba (Fiat)"
+            "modelo": "Elantra",
+            "marca": "Hyundai"
         },
         {
-            "Modelo": "FastBack (Fiat)"
+            "modelo": "Elba",
+            "marca": "Fiat"
         },
         {
-            "Modelo": "Fiesta (Ford)"
+            "modelo": "Escort",
+            "marca": "Ford"
         },
         {
-            "Modelo": "Fusion (Ford)"
+            "modelo": "Etios",
+            "marca": "Toyota"
         },
         {
-            "Modelo": "Focus (Ford)"
+            "modelo": "Evoque",
+            "marca": "Land Rover"
         },
         {
-            "Modelo": "Fusca (Volkswagen)"
+            "modelo": "FastBack",
+            "marca": "Fiat"
         },
         {
-            "Modelo": "Fiorino (Fiat)"
+            "modelo": "Fiesta",
+            "marca": "Ford"
         },
         {
-            "Modelo": "Fit (Honda)"
+            "modelo": "Fiorino",
+            "marca": "Fiat"
         },
         {
-            "Modelo": "Grand Caravan (Chrysler)"
+            "modelo": "Fit",
+            "marca": "Honda"
         },
         {
-            "Modelo": "Gallardo (Lamborghini)"
+            "modelo": "Focus",
+            "marca": "Ford"
         },
         {
-            "Modelo": "Gloria (Nissan)"
+            "modelo": "Fusion",
+            "marca": "Ford"
         },
         {
-            "Modelo": "Gol (Volkswagen)"
+            "modelo": "Fusca",
+            "marca": "Volkswagen"
         },
         {
-            "Modelo": "Golf (Volkswagen)"
+            "modelo": "Gallardo",
+            "marca": "Lamborghini"
         },
         {
-            "Modelo": "Grand Siena (Fiat)"
+            "modelo": "Galloper",
+            "marca": "Hyundai"
         },
         {
-            "Modelo": "Galloper (Hyundai)"
+            "modelo": "Gloria",
+            "marca": "Nissan"
         },
         {
-            "Modelo": "Hilux (Toyota)"
+            "modelo": "Gol",
+            "marca": "Volkswagen"
         },
         {
-            "Modelo": "HB20 (Hyundai)"
+            "modelo": "Golf",
+            "marca": "Volkswagen"
         },
         {
-            "Modelo": "HR-V (Honda)"
+            "modelo": "Grand Caravan",
+            "marca": "Chrysler"
         },
         {
-            "Modelo": "Hoggar (Peugeot)"
+            "modelo": "Grand Siena",
+            "marca": "Fiat"
         },
         {
-            "Modelo": "Hummer EV (GMC)"
+            "modelo": "HB20",
+            "marca": "Hyundai"
         },
         {
-            "Modelo": "I-Pace (Jaguar)"
+            "modelo": "HR-V",
+            "marca": "Honda"
         },
         {
-            "Modelo": "Impreza (Subaru)"
+            "modelo": "Hilux",
+            "marca": "Toyota"
         },
         {
-            "Modelo": "Idea (Fiat)"
+            "modelo": "Hoggar",
+            "marca": "Peugeot"
         },
         {
-            "Modelo": "i30 (Hyundai)"
+            "modelo": "Hummer EV",
+            "marca": "GMC"
         },
         {
-            "Modelo": "Ioniq (Hyundai)"
+            "modelo": "Idea",
+            "marca": "Fiat"
         },
         {
-            "Modelo": "Idea (Fiat)"
+            "modelo": "Impreza",
+            "marca": "Subaru"
         },
         {
-            "Modelo": "Ipanema (Chevrolet)"
+            "modelo": "Ipanema",
+            "marca": "Chevrolet"
         },
         {
-            "Modelo": "Logan (Renault)"
+            "modelo": "I-Pace",
+            "marca": "Jaguar"
+        },
+        {
+            "modelo": "i30",
+            "marca": "Hyundai"
+        },
+        {
+            "modelo": "Ioniq",
+            "marca": "Hyundai"
+        },
+        {
+            "modelo": "J2",
+            "marca": "Jac"
+        },
+        {
+            "modelo": "Jade",
+            "marca": "Honda"
+        },
+        {
+            "modelo": "Jarama",
+            "marca": "Lamborghini"
+        },
+        {
+            "modelo": "Jetta",
+            "marca": "Volkswagen"
+        },
+        {
+            "modelo": "Journey",
+            "marca": "Dodge"
+        },
+        {
+            "modelo": "Jimny",
+            "marca": "Suzuki"
+        },
+        {
+            "modelo": "Jumper",
+            "marca": "Citroën"
+        },
+        {
+            "modelo": "Ka",
+            "marca": "Ford"
+        },
+        {
+            "modelo": "Kadett",
+            "marca": "Chevrolet"
+        },
+        {
+            "modelo": "Kangoo",
+            "marca": "Renault"
+        },
+        {
+            "modelo": "Kardian",
+            "marca": "Renault"
+        },
+        {
+            "modelo": "Karmann Ghia",
+            "marca": "Volkswagen"
+        },
+        {
+            "modelo": "Kicks",
+            "marca": "Nissan"
+        },
+        {
+            "modelo": "Kombi",
+            "marca": "Volkswagen"
+        },
+        {
+            "modelo": "Kwid",
+            "marca": "Renault"
+        },
+        {
+            "modelo": "L200",
+            "marca": "Mitsubishi"
+        },
+        {
+            "modelo": "Lancer",
+            "marca": "Mitsubishi"
+        },
+        {
+            "modelo": "Land Cruiser",
+            "marca": "Toyota"
+        },
+        {
+            "modelo": "Landau",
+            "marca": "Ford"
+        },
+        {
+            "modelo": "Linea",
+            "marca": "Fiat"
+        },
+        {
+            "modelo": "Logan",
+            "marca": "Renault"
+        },
+        {
+            "modelo": "Logus",
+            "marca": "Volkswagen"
+        },
+        {
+            "modelo": "Marea",
+            "marca": "Fiat"
+        },
+        {
+            "modelo": "Maverick",
+            "marca": "Ford"
+        },
+        {
+            "modelo": "Miura",
+            "marca": "Lamborghini"
+        },
+        {
+            "modelo": "Mohave",
+            "marca": "Kia"
+        },
+        {
+            "modelo": "Monza",
+            "marca": "Chevrolet"
+        },
+        {
+            "modelo": "Montana",
+            "marca": "Chevrolet"
+        },
+        {
+            "modelo": "Mustang",
+            "marca": "Ford"
+        },
+        {
+            "modelo": "New Beetle",
+            "marca": "Volkswagen"
+        },
+        {
+            "modelo": "Niro",
+            "marca": "Kia"
+        },
+        {
+            "modelo": "Niva",
+            "marca": "Lada"
+        },
+        {
+            "modelo": "Nivus",
+            "marca": "Volkswagen"
+        },
+        {
+            "modelo": "Nova",
+            "marca": "Chevrolet"
+        },
+        {
+            "modelo": "Nuvis",
+            "marca": "Hyundai"
+        },
+        {
+            "modelo": "Odyssey",
+            "marca": "Honda"
+        },
+        {
+            "modelo": "Omega",
+            "marca": "Chevrolet"
+        },
+        {
+            "modelo": "Onix",
+            "marca": "Chevrolet"
+        },
+        {
+            "modelo": "Opala",
+            "marca": "Chevrolet"
+        },
+        {
+            "modelo": "Oggi",
+            "marca": "Fiat"
+        },
+        {
+            "modelo": "Outback",
+            "marca": "Subaru"
+        },
+        {
+            "modelo": "Outlander",
+            "marca": "Mitsubishi"
+        },
+        {
+            "modelo": "Pajero",
+            "marca": "Mitsubishi"
+        },
+        {
+            "modelo": "Palio",
+            "marca": "Fiat"
+        },
+        {
+            "modelo": "Panamera",
+            "marca": "Porsche"
+        },
+        {
+            "modelo": "Panorama",
+            "marca": "Fiat"
+        },
+        {
+            "modelo": "Pampa",
+            "marca": "Ford"
+        },
+        {
+            "modelo": "Parati",
+            "marca": "Volkswagen"
+        },
+        {
+            "modelo": "Passat",
+            "marca": "Volkswagen"
+        },
+        {
+            "modelo": "Punto",
+            "marca": "Fiat"
+        },
+        {
+            "modelo": "Q3",
+            "marca": "Audi"
+        },
+        {
+            "modelo": "Q7",
+            "marca": "Audi"
+        },
+        {
+            "modelo": "Qashqai",
+            "marca": "Nissan"
+        },
+        {
+            "modelo": "QQ",
+            "marca": "Chery"
+        },
+        {
+            "modelo": "Quoris",
+            "marca": "Kia"
+        },
+        {
+            "modelo": "Qubo",
+            "marca": "Fiat"
+        },
+        {
+            "modelo": "Quantum",
+            "marca": "Volkswagen"
+        },
+        {
+            "modelo": "Rabbit",
+            "marca": "Volkswagen"
+        },
+        {
+            "modelo": "Rampage",
+            "marca": "Ram"
+        },
+        {
+            "modelo": "Range Rover",
+            "marca": "Land Rover"
+        },
+        {
+            "modelo": "Ranger",
+            "marca": "Ford"
+        },
+        {
+            "modelo": "Raptor",
+            "marca": "Ford"
+        },
+        {
+            "modelo": "Rav4",
+            "marca": "Toyota"
+        },
+        {
+            "modelo": "Renegade",
+            "marca": "Jeep"
+        },
+        {
+            "modelo": "Rio",
+            "marca": "Kia"
+        },
+        {
+            "modelo": "Rocsta",
+            "marca": "Asia"
+        },
+        {
+            "modelo": "Renegade",
+            "marca": "Jeep"
+        },
+        {
+            "modelo": "Sandero",
+            "marca": "Renault"
+        },
+        {
+            "modelo": "S-10",
+            "marca": "Chevrolet"
+        },
+        {
+            "modelo": "Saveiro",
+            "marca": "Volkswagen"
+        },
+        {
+            "modelo": "Scenic",
+            "marca": "Renault"
+        },
+        {
+            "modelo": "Sentra",
+            "marca": "Nissan"
+        },
+        {
+            "modelo": "Silverado",
+            "marca": "Chevrolet"
+        },
+        {
+            "modelo": "Siena",
+            "marca": "Fiat"
+        },
+        {
+            "modelo": "Sonata",
+            "marca": "Hyundai"
+        },
+        {
+            "modelo": "Sonic",
+            "marca": "Chevrolet"
+        },
+        {
+            "modelo": "Spin",
+            "marca": "Chevrolet"
+        },
+        {
+            "modelo": "Strada",
+            "marca": "Fiat"
+        },
+        {
+            "modelo": "SW4",
+            "marca": "Toyota"
+        },
+        {
+            "modelo": "Tan",
+            "marca": "BYD"
+        },
+        {
+            "modelo": "Taurus",
+            "marca": "Ford"
+        },
+        {
+            "modelo": "Titano",
+            "marca": "Fiat"
+        },
+        {
+            "modelo": "Tiggo 7",
+            "marca": "Caoa Chery"
+        },
+        {
+            "modelo": "Toro",
+            "marca": "Fiat"
+        },
+        {
+            "modelo": "Trailblazer",
+            "marca": "Chevrolet"
+        },
+        {
+            "modelo": "Tucson",
+            "marca": "Hyundai"
+        },
+        {
+            "modelo": "Tundra",
+            "marca": "Toyota"
+        },
+        {
+            "modelo": "T-Cross",
+            "marca": "Volkswagen"
+        },
+        {
+            "modelo": "Tiggo 3X",
+            "marca": "Caoa Chery"
+        },
+        {
+            "modelo": "Tiguan",
+            "marca": "Volkswagen"
+        },
+        {
+            "modelo": "Toro",
+            "marca": "Fiat"
+        },
+        {
+            "modelo": "Tracker",
+            "marca": "Chevrolet"
+        },
+        {
+            "modelo": "Uirapuru",
+            "marca": "Brasinca"
+        },
+        {
+            "modelo": "Ulysse",
+            "marca": "Fiat"
+        },
+        {
+            "modelo": "Unimog",
+            "marca": "Mercedes-Benz"
+        },
+        {
+            "modelo": "Uno",
+            "marca": "Fiat"
+        },
+        {
+            "modelo": "Uplander",
+            "marca": "Chevrolet"
+        },
+        {
+            "modelo": "Up!",
+            "marca": "Volkswagen"
+        },
+        {
+            "modelo": "Urraco",
+            "marca": "Lamborghini"
+        },
+        {
+            "modelo": "Urus",
+            "marca": "Lamborghini"
+        },
+        {
+            "modelo": "Versa",
+            "marca": "Nissan"
+        },
+        {
+            "modelo": "Virtus",
+            "marca": "Volkswagen"
+        },
+        {
+            "modelo": "Vectra",
+            "marca": "Chevrolet"
+        },
+        {
+            "modelo": "Veloster",
+            "marca": "Hyundai"
+        },
+        {
+            "modelo": "Veracruz",
+            "marca": "Hyundai"
+        },
+        {
+            "modelo": "Veraneio",
+            "marca": "Chevrolet"
+        },
+        {
+            "modelo": "Verona",
+            "marca": "Ford"
+        },
+        {
+            "modelo": "Versailles",
+            "marca": "Ford"
+        },
+        {
+            "modelo": "Viper",
+            "marca": "Dodge"
+        },
+        {
+            "modelo": "Wagon R",
+            "marca": "Suzuki"
+        },
+        {
+            "modelo": "Wagoneer",
+            "marca": "Jeep"
+        },
+        {
+            "modelo": "Wind",
+            "marca": "Renault"
+        },
+        {
+            "modelo": "WR-V",
+            "marca": "Honda"
+        },
+        {
+            "modelo": "WRX",
+            "marca": "Subaru"
+        },
+        {
+            "modelo": "Wraith",
+            "marca": "Rolls-Royce"
+        },
+        {
+            "modelo": "Wrangler",
+            "marca": "Jeep"
+        },
+        {
+            "modelo": "XC40",
+            "marca": "Volvo"
+        },
+        {
+            "modelo": "Xantia",
+            "marca": "Citroën"
+        },
+        {
+            "modelo": "Xsara",
+            "marca": "Citroën"
+        },
+        {
+            "modelo": "Xterra",
+            "marca": "Nissan"
+        },
+        {
+            "modelo": "XV",
+            "marca": "Subaru"
+        },
+        {
+            "modelo": "XC60",
+            "marca": "Volvo"
+        },
+        {
+            "modelo": "X60",
+            "marca": "Caoa Chery"
+        },
+        {
+            "modelo": "Yaris",
+            "marca": "Toyota"
+        },
+        {
+            "modelo": "Yeti",
+            "marca": "Skoda"
+        },
+        {
+            "modelo": "Ypslon",
+            "marca": "Lancia"
+        },
+        {
+            "modelo": "YRV",
+            "marca": "Daihatsu"
+        },
+        {
+            "modelo": "Yuan",
+            "marca": "BYD"
+        },
+        {
+            "modelo": "Z3",
+            "marca": "BMW"
+        },
+        {
+            "modelo": "Zafira",
+            "marca": "Chevrolet"
+        },
+        {
+            "modelo": "Zodiac",
+            "marca": "Ford"
+        },
+        {
+            "modelo": "Zoe",
+            "marca": "Renault"
+        },
+        {
+            "modelo": "ZX",
+            "marca": "Citroën"
         }
     ],
     "Exemplos": [

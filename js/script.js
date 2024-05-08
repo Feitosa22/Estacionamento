@@ -45,7 +45,7 @@ const listaNomeDeCarros = () => {
       const marcasDosCarros = data.marcaModelo;
       marcasDosCarros.forEach((carro) => {
         let option = document.createElement("option");
-        option.value = carro.Modelo;
+        option.value = `${carro.modelo} (${carro.marca})`;
         carros.appendChild(option);
       });
     })
