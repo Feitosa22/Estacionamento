@@ -91,7 +91,7 @@ const alertCustomizado = (msg, cor) => {
   divCriada.style.backgroundColor = cor;
   setTimeout(() => {
     MostrarnaTela.removeChild(divCriada);
-  }, 3500);
+  }, 4500);
 };
 
 function verificarDuplicidade(Placa) {
