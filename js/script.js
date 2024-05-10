@@ -143,8 +143,8 @@ const criarRegistroEntradaVeiculo = () => {
     localStorage.dados = JSON.stringify(dadosDoLocalStorage);
 
     limparTabelaEInputs();
-    
-    mostrarDadosNaTabelaProUsuario(dataObject, dadosDoLocalStorage.length);
+
+    mostrarDadosNaTabelaProUsuario(dataObject, dadosDoLocalStorage.length - 1);
     alertCustomizado(`Veículo ${Modelo}\nPlaca ${Placa} estacionado!`, "blue");
   } catch (error) {
     alertCustomizado("Erro Interno!", "purple");
@@ -234,8 +234,12 @@ pegarElemento("#corpoTabela").addEventListener("click", (event) => {
   if (event.target.type == "button") {
     limparTabelaEInputs();
     carro.Saida = hora;
-    let entradaAtualizada = new Date(carro.Id).setHours(carro.Entrada.substring(0, 2));
-    entradaAtualizada = new Date(entradaAtualizada).setMinutes(carro.Entrada.substring(3, 5));
+    let entradaAtualizada = new Date(carro.Id).setHours(
+      carro.Entrada.substring(0, 2)
+    );
+    entradaAtualizada = new Date(entradaAtualizada).setMinutes(
+      carro.Entrada.substring(3, 5)
+    );
     const tempoEstacionado = calcularTempoEstacionado(entradaAtualizada, Saida);
     const valorPagar = calcularValorPagar(tempoEstacionado);
     alertCustomizado(`Valor a pagar: ${valorPagar} Reais`, "green");
