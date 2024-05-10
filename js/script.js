@@ -82,7 +82,6 @@ const mostrarDadosNaTabelaProUsuario = (dados, index) => {
 };
 
 const alertCustomizado = (msg, cor) => {
-  console.log(typeof cor);
   let MostrarnaTela = document.querySelector("#container");
   let divCriada = document.createElement("div");
   divCriada.classList.add("alertaCustomizado");
@@ -140,13 +139,15 @@ const criarRegistroEntradaVeiculo = () => {
     };
 
     dadosDoLocalStorage.push(dataObject);
+    console.log(dadosDoLocalStorage.length);
     localStorage.dados = JSON.stringify(dadosDoLocalStorage);
 
     limparTabelaEInputs();
-    mostrarDadosNaTabelaProUsuario(dataObject, 0);
+    
+    mostrarDadosNaTabelaProUsuario(dataObject, dadosDoLocalStorage.length);
     alertCustomizado(`Veículo ${Modelo}\nPlaca ${Placa} estacionado!`, "blue");
   } catch (error) {
-    alertCustomizado(error, "purple");
+    alertCustomizado("Erro Interno!", "purple");
   }
 };
 
@@ -165,8 +166,15 @@ const calcularTempoEstacionado = (entrada, saida) => {
 
 const saidaDeCarro = () => {
   let Placa = pegarElemento("#Placa").value;
-  let Saida = Date.now();
-  let hora = new Date(Saida).toLocaleString("pt-BR", {
+  let Saida = pegarElemento("#horarioSaida").value;
+  let horarioAtualizado = Date.now();
+  horarioAtualizado = new Date(horarioAtualizado).setHours(
+    Saida.substring(0, 2)
+  );
+  horarioAtualizado = new Date(horarioAtualizado).setMinutes(
+    Saida.substring(3, 5)
+  );
+  let hora = new Date(horarioAtualizado).toLocaleString("pt-BR", {
     hour: "numeric",
     minute: "numeric",
   });
@@ -181,11 +189,19 @@ const saidaDeCarro = () => {
   pegarDadosDoLocalStorage();
   dadosDoLocalStorage.forEach((elemento, index) => {
     if (Placa === elemento.Placa) {
-      console.log(elemento);
+      let entradaAtualizada = new Date(elemento.Id).setHours(
+        elemento.Entrada.substring(0, 2)
+      );
+      entradaAtualizada = new Date(elemento.Id).setMinutes(
+        elemento.Entrada.substring(3, 5)
+      );
       elemento.Saida = hora;
       placaEncontrada = true;
-      const tempoEstacionado = calcularTempoEstacionado(elemento.Id, Saida);
-      const valorPagar = calcularValorPagar(tempoEstacionado);      
+      const tempoEstacionado = calcularTempoEstacionado(
+        entradaAtualizada,
+        Saida
+      );
+      const valorPagar = calcularValorPagar(tempoEstacionado);
       alertCustomizado(`Valor a pagar: ${valorPagar} Reais`, "green");
       localStorage.dados = JSON.stringify(dadosDoLocalStorage);
       limparTabelaEInputs();
@@ -207,22 +223,23 @@ function mostrarCarrosEstacionados() {
 }
 
 pegarElemento("#corpoTabela").addEventListener("click", (event) => {
-  pegarDadosDoLocalStorage();
   let Saida = Date.now();
   let hora = new Date(Saida).toLocaleString("pt-BR", {
     hour: "numeric",
     minute: "numeric",
   });
   let index = event.target.dataset.indice;
+  pegarDadosDoLocalStorage();
   let carro = pegarDadosDoLocalStorage()[index];
   if (event.target.type == "button") {
     limparTabelaEInputs();
     carro.Saida = hora;
-    console.log(carro);
-    const tempoEstacionado = calcularTempoEstacionado(carro.Id, Saida);
+    let entradaAtualizada = new Date(carro.Id).setHours(carro.Entrada.substring(0, 2));
+    entradaAtualizada = new Date(entradaAtualizada).setMinutes(carro.Entrada.substring(3, 5));
+    const tempoEstacionado = calcularTempoEstacionado(entradaAtualizada, Saida);
     const valorPagar = calcularValorPagar(tempoEstacionado);
     alertCustomizado(`Valor a pagar: ${valorPagar} Reais`, "green");
     localStorage.dados = JSON.stringify(dadosDoLocalStorage);
-    mostrarDadosNaTabelaProUsuario(carro, 0);
+    mostrarDadosNaTabelaProUsuario(carro, index);
   }
 });
