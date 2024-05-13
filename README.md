@@ -10,5 +10,7 @@ deve pagar:
 adicional
 3. Ao clicar no botão Mostrar Carros Estacionados o sistema deve gerar a tabela
 com o historico dos veículos!.
+4. Usado um Json para salvar o modelo dos principais carros no Brasil!
+5. O campo time deve ser possível colocar a hora atual ou escolher manualmente!
 
 Deploy no netlify dazzling-mermaid-bf9f27.netlify.app/
